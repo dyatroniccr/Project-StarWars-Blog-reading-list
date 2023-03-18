@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-const Card = (props) => {
+const CardPlanets = (props) => {
     //<></> se conocen como React Fragment
 
     return(
@@ -20,4 +20,4 @@ const Card = (props) => {
     );   
 };
 
-export default Card;
+export default CardPlanets;

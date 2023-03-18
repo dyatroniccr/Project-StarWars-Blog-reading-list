@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 
 //Import other components
-import CardPeople from "../component/cardSW.jsx";
+import CardPeople from "../component/cardPeople.jsx";
 
 import "../../styles/home.css";
 
