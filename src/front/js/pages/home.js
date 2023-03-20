@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 
 //Import other components
 import CardPeople from "../component/cardPeople.jsx";
@@ -30,3 +29,5 @@ export const Home = () => {
     </>
   );
 };
+
+/*Overflow*/

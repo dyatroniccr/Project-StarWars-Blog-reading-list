@@ -1,4 +1,4 @@
-export const exampleStore = {
+ export const exampleStore = {
     exampleArray: [],
     exampleObj: {
         msg: "I'm an object"
