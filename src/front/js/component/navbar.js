@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 //Mis Imagenes
 import logoStarWars from "../../img/logo.png";
 
+//Components
+import DropButton from "./dropdown/dropButton.jsx";
+
+
 export const Navbar = () => {
   //<a href="./demo.html">
   return (
@@ -14,16 +18,7 @@ export const Navbar = () => {
             logoStarWars
           </span>
         </Link>
-        <div className="dropdown ml-auto">
-          <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Favorites
-          </button>
-          <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
-              <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
+        < DropButton />
       </div>
     </nav>
   );
