@@ -17,8 +17,8 @@ const SinglePeople = () => {
         }
         cargaDatos()
 
-    }, [])
-    
+    }, [params.uid])
+
     return (<>
         Soy {people.name ? people.name : ""} con el uid {params.uid} y mi género es {people?.gender}
     </>)
