@@ -389,9 +389,9 @@ export function usuarioActions(getStore, getActions, setStore) {
         setStore({
           ...store,
           usersData: [
-            respuestaJsonPeople.people,
-            respuestaJsonVehicles.vehicles,
-            respuestaJsonPlanets.planets,
+            respuestaJsonPeople.results,
+            respuestaJsonVehicles.results,
+            respuestaJsonPlanets.results,
           ],
         });
       } catch (error) {

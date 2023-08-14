@@ -42,7 +42,7 @@ const CardVehicle = () => {
                         </p>
                         <div className="d-flex justify-content-between">
                           <Link
-                            to={`/vehicle/${item.uid}`}
+                            to={`/vehicles/${item.uid}`}
                             className="btn btn-primary"
                           >
                             Learn More!
@@ -51,7 +51,7 @@ const CardVehicle = () => {
                             type="button"
                             className="btn"
                             onClick={() => {
-                              let urlPath = { ...item, url: "/vehicle/" };
+                              let urlPath = { ...item, url: "/vehicles/" };
                               addToFavorites(urlPath);
                             }}
                           >

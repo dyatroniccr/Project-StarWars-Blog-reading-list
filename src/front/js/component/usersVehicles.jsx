@@ -29,10 +29,10 @@ const UsersVehicles = () => {
                         <>
                             {usersVehicles.map((item, index) => {
                                 return (
-                                    <div className="card-wrapper" key={item.id}>
+                                    <div className="card-wrapper" key={item.uid}>
                                         <div className="card" style={{ width: "250px" }}>
                                             <img
-                                                src={`https://starwars-visualguide.com/assets/img/vehicles/${item.id}.jpg`}
+                                                src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`}
                                                 onError={(e) => { e.target.onerror = null; e.target.src = 'https://starwars-visualguide.com/assets/img/big-placeholder.jpg' }}
                                                 className="card-img-top"
                                                 alt="..."
@@ -45,7 +45,7 @@ const UsersVehicles = () => {
                                                     make up the bulk of the card's content.
                                                 </p>
                                                 <div className="d-flex justify-content-between">
-                                                    <Link to={`/usersvehicle/${item.id}`} className="btn btn-primary">
+                                                    <Link to={`/vehicles/${item.uid}`} className="btn btn-primary">
                                                         Learn More!
                                                     </Link>
                                                     <button type="button" className="btn" onClick={() => {

@@ -63,24 +63,5 @@ export function starWarsActions(getStore, getActions, setStore) {
         console.error(error);
       }
     },
-
-    // initialFetch: async () => {
-    //   let store = getStore();
-    //   let responsePeople = fetch("https://www.swapi.tech/api/people");
-    //   let responseVehicles = fetch("https://www.swapi.tech/api/vehicles");
-    //   let responsePlanets = fetch("https://www.swapi.tech/api/planets");
-
-    //   let [a, b, c] = await Promise.all([
-    //     responsePeople,
-    //     responseVehicles,
-    //     responsePlanets,
-    //   ]);
-
-    //   let respuestaJsonPeople = await a.json();
-    //   console.log(respuestaJsonPeople);
-    //   let respuestaJsonVehicles = await b.json();
-    //   let respuestaJsonPlanets = await c.json();
-    //   setStore(store.initialFetch.push(respuestaJsonPeople));
-    // },
   };
 }

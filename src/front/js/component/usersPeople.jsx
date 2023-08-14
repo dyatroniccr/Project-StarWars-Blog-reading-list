@@ -28,10 +28,10 @@ const UsersPeople = () => {
             <>
               {usersPeople.map((item, index) => {
                 return (
-                  <div className="card-wrapper" key={item.id}>
+                  <div className="card-wrapper" key={item.uid}>
                     <div className="card" style={{ width: "250px" }}>
                       <img
-                        src={`https://starwars-visualguide.com/assets/img/characters/${item.id}.jpg`}
+                        src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src =
@@ -49,7 +49,7 @@ const UsersPeople = () => {
                         </p>
                         <div className="d-flex justify-content-between">
                           <Link
-                            to={`/userspeople/${item.id}`}
+                            to={`/people/${item.uid}`}
                             className="btn btn-primary"
                           >
                             Learn More!
