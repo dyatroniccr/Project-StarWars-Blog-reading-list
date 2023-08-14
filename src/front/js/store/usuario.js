@@ -57,10 +57,15 @@ export function usuarioActions(getStore, getActions, setStore) {
       const token = localStorage.getItem("token");
       const decodedToken = jwt_decode(token);
       const userId = decodedToken.sub;
-
+      
+      let objId = {
+        user_id: token,
+      }
       // Call the useFetch() function with the userId
+      //let objID = ${userId};
       let { respuestaJson, response } = await actions.useFetch(
-        `/favorites/${userId}`
+        "/favorites/${userId}",
+        
       );
 
       if (response.ok) {
