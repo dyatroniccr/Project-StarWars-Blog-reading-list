@@ -11,13 +11,14 @@ import UsersVehicles from "../component/usersVehicles.jsx";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-
+  
   return (
     <>
       {store.userLogin ? (
         <>
           <div className="d-flex">
             <h1 className="text-danger ms-5">Characters</h1>
+            
             <Link to="/add-people">
               <button type="button" className="btn btn-primary ms-3">
                 Add New Character

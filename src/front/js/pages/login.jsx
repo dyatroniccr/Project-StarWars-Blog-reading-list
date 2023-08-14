@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import jwt_decode from 'jwt-decode';
+//import jwt_decode from 'jwt-decode';
 
 const Login = () => {
     const { store, actions } = useContext(Context);
@@ -10,15 +10,15 @@ const Login = () => {
     const navigate = useNavigate(); // initialize useNavigate hook
 
     useEffect(() => {
-        console.log(email);
+        //console.log(email);
     }, [email]);
 
     useEffect(() => {
-        console.log(password);
+        //console.log(password);
     }, [password]);
 
     const handleLogin = async (e) => {
-        e.preventDefault(); // prevent form from submitting
+        e.preventDefault(); // prevent form from submitting        
         let { respuestaJson, response } = await actions.login(email, password); // call login action
         console.log(response)
         if (response.ok) {

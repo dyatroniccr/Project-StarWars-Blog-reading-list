@@ -68,6 +68,9 @@ export const Navbar = () => {
             style={{ width: "100px" }}
           ></img>
         </Link>
+        <Link to="/info">
+          Info
+        </Link>
         {store.userLogin ? (
           <></>
         ) : (

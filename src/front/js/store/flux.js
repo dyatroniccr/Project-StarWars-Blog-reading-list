@@ -61,14 +61,15 @@ const getState = ({ getStore, getActions, setStore }) => {
       ...usuarioActions(getStore, getActions, setStore),
       ...starWarsActions(getStore, getActions, setStore),
       useFetch: async (endpoint, body = "", method = "GET") => {
-        let url = `${process.env.BACKEND_URL}/api` + endpoint;
+       // let url = `${process.env.BACKEND_URL}/api` + endpoint;
+        let url = `${process.env.BACKEND_URL}` + endpoint;
         console.log(url);
         console.log(body);
         let response = await fetch(url, {
           method: method,
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer " + localStorage.getItem("token"),
+            "Authorization": "Bearer " + localStorage.getItem("token"),
           },
           body: body ? JSON.stringify(body) : null,
         });

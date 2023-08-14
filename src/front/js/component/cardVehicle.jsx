@@ -14,15 +14,6 @@ const CardVehicle = () => {
     }
   }, [store.initialFetch]);
 
-  // useEffect(() => {
-  //     //ejecutamos una función asíncrona que traerá la información de la lista de To Do
-  //     const cargaDatos = async () => {
-  //         let { respuestaJson, response } = await actions.useSwapi("/vehicles");
-  //         setVehicle(respuestaJson.results);
-  //     };
-  //     cargaDatos();
-  // }, []);
-
   const addToFavorites = (item) => {
     actions.addFavorite(item);
   };

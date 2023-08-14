@@ -33,8 +33,8 @@ export function usuarioActions(getStore, getActions, setStore) {
       );
       console.log(response.ok);
       console.log(respuestaJson);
-      if (response.ok) {
-        localStorage.setItem("token", respuestaJson.token);
+      if (response.ok) {         
+        localStorage.setItem("token", respuestaJson.token);  
         sessionStorage.setItem("token", respuestaJson.token);
         let token = localStorage.getItem("token");
         setStore({ ...store, userLogin: true });
@@ -48,6 +48,7 @@ export function usuarioActions(getStore, getActions, setStore) {
 
       return { respuestaJson, response };
     },
+    
     getUserFavorites: async () => {
       const store = getStore();
       const actions = getActions();
@@ -249,7 +250,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       const actions = getActions();
       let body = "";
       let { respuestaJson, response } = await actions.useFetch(
-        "/logout",
+        "/api/logout",
         body,
         "POST"
       );
@@ -368,9 +369,9 @@ export function usuarioActions(getStore, getActions, setStore) {
     initialFetchUsersData: async () => {
       try {
         let store = getStore();
-        let responsePeople = fetch(`${process.env.BACKEND_URL}/api/people`);
-        let responseVehicles = fetch(`${process.env.BACKEND_URL}/api/vehicles`);
-        let responsePlanets = fetch(`${process.env.BACKEND_URL}/api/planets`);
+        let responsePeople = fetch(`${process.env.BACKEND_SW}/api/people`);
+        let responseVehicles = fetch(`${process.env.BACKEND_SW}/api/vehicles`);
+        let responsePlanets = fetch(`${process.env.BACKEND_SW}/api/planets`);
 
         let [respuestaJsonPeople, respuestaJsonVehicles, respuestaJsonPlanets] =
           await Promise.all([

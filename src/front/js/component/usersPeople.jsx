@@ -6,10 +6,11 @@ import "../../styles/home.css";
 
 const UsersPeople = () => {
   const { store, actions } = useContext(Context);
-
   const [usersPeople, setUsersPeople] = useState([]);
 
+  
   useEffect(() => {
+    console.log(store)
     if (store.usersData.length > 0) {
       setUsersPeople(store.usersData[0]);
     }

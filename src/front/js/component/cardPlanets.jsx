@@ -13,15 +13,6 @@ const CardPlanets = () => {
         }
     }, [store.initialFetch]);
 
-
-    // useEffect(() => {
-    //     const cargaDatos = async () => {
-    //         let { respuestaJson, response } = await actions.useSwapi("/planets");
-    //         setPlanets(respuestaJson.results);
-    //     };
-    //     cargaDatos();
-    // }, []);
-
     const addToFavorites = (item) => {
         actions.addFavorite(item);
     };
