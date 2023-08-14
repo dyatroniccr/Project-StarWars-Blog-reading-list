@@ -14,7 +14,7 @@ const CardPlanets = () => {
     }, [store.initialFetch]);
 
     const addToFavorites = (item) => {
-        actions.addFavorite(item);
+        actions.addPlanetFavorite(item);
     };
 
     return (

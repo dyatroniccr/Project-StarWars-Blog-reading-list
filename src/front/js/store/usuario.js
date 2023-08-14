@@ -81,7 +81,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       console.log(item);
       let obj = {
         user_id: userId,
-        people_id: item.id,
+        people_id: item.uid,
       };
 
       const nameExists = store.userFavorites.some(
@@ -93,7 +93,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       }
 
       let { respuestaJson, response } = await actions.useFetch(
-        "/favorite/people",
+        "/add-favorite/people",
         obj,
         "POST"
       );
@@ -114,7 +114,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       console.log(item);
       let obj = {
         user_id: userId,
-        planet_id: item.id,
+        planet_id: item.uid,
       };
 
       const nameExists = store.userFavorites.some(
@@ -126,7 +126,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       }
 
       let { respuestaJson, response } = await actions.useFetch(
-        "/favorite/planet",
+        "/add-favorite/planet",
         obj,
         "POST"
       );
@@ -147,7 +147,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       console.log(item);
       let obj = {
         user_id: userId,
-        vehicle_id: item.id,
+        vehicle_id: item.uid,
       };
 
       const nameExists = store.userFavorites.some(
@@ -159,7 +159,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       }
 
       let { respuestaJson, response } = await actions.useFetch(
-        "/favorite/vehicle",
+        "/add-favorite/vehicle",
         obj,
         "POST"
       );
@@ -250,7 +250,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       const actions = getActions();
       let body = "";
       let { respuestaJson, response } = await actions.useFetch(
-        "/api/logout",
+        "/logout",
         body,
         "POST"
       );

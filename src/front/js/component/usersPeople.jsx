@@ -9,8 +9,7 @@ const UsersPeople = () => {
   const [usersPeople, setUsersPeople] = useState([]);
 
   
-  useEffect(() => {
-    console.log(store)
+  useEffect(() => {    
     if (store.usersData.length > 0) {
       setUsersPeople(store.usersData[0]);
     }

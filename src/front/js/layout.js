@@ -13,9 +13,6 @@ import SinglePlanets from "./component/singlePlanets.jsx";
 import SingleVehicles from "./component/singleVehicles.jsx";
 import Login from "./pages/login.jsx";
 import Register from "./pages/register.jsx";
-import UsersDetailedPeople from "./component/usersDetailedPeople.jsx";
-import UsersDetailedPlanet from "./component/usersDetailedPlanet.jsx";
-import UsersDetailedVehicle from "./component/usersDetailedVehicle.jsx";
 import AddPeople from "./pages/addPeople.jsx";
 import AddPlanet from "./pages/addPlanet.jsx";
 import AddVehicle from "./pages/addVehicle.jsx";
@@ -54,12 +51,6 @@ const Layout = () => {
             <Route element={<SinglePeople />} path="/people/:uid" />
             <Route element={<SinglePlanets />} path="/planets/:uid" />
             <Route element={<SingleVehicles />} path="/vehicles/:uid" />
-            <Route element={<UsersDetailedPeople />} path="/userspeople/:id" />            
-            <Route
-              element={<UsersDetailedVehicle />}
-              path="/usersvehicle/:id"
-            />            
-            <Route element={<UsersDetailedPlanet />} path="/usersplanet/:id" />
             <Route element={<h1>Not found! 404</h1>} path="*" />
           </Routes>
           <Footer />

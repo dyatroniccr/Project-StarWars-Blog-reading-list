@@ -16,7 +16,8 @@ const CardPeople = () => {
   }, [store.initialFetch]);
 
   const addToFavorites = (item) => {
-    actions.addFavorite(item);
+    console.log(item)
+    actions.addPeopleFavorite(item);
   };
 
   return (
