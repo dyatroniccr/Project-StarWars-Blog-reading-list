@@ -1,5 +1,6 @@
 import React, {useState, useContext, useEffect} from "react";
 import { Context } from "../store/appContext";
+import WithAuth from "../component/Auth/withAuth";
 
 const Informacion = () => {
     const { store, actions } = useContext(Context);
@@ -26,4 +27,4 @@ const Informacion = () => {
         </> );
 };
 
-export default Informacion;
+export default WithAuth(Informacion);

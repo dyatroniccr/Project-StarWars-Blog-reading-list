@@ -3,7 +3,7 @@ import { Context } from "../../store/appContext";
 import { Navigate } from "react-router-dom"; //v.6.3.0, para versiones viejas sería <Redirect/>
 
 const WithAuth = (Component) => {
-  //HOC
+  //HOC Componentes de alto orden
   const AuthRoute = () => {
     const { store, actions } = useContext(Context);
 

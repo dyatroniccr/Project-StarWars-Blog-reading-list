@@ -67,7 +67,16 @@ export const Navbar = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png"
             style={{ width: "100px" }}
           ></img>
-        </Link>       
+        </Link>
+        {store.userLogin ? (
+          <Link to="/info">
+            <button type="button" className="btn btn-danger">
+              Info
+            </button>
+          </Link>
+        ) : (
+          <></>
+        )}
         {store.userLogin ? (
           <></>
         ) : (
