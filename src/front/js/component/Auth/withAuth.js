@@ -4,8 +4,12 @@ import { Navigate } from "react-router-dom"; //v.6.3.0, para versiones viejas se
 
 const WithAuth = (Component) => {
   //HOC Componentes de alto orden
-  // Preguntar si tiene perfil OJO minuto 103
-  // Tengo que crear nuevos perfiles en Base de Datos
+  // Crear otro componente en el Front de alto orden que tenga cosas distintas para saber si eres Administrador
+  // En el backend hacer otras rutas protegidas preguntando ciertas cosas, ej: si el modelo usuario tiene perfil,  
+  // podrias tener perfil de administrador, cliente o visitando, el usuario que logueado en Base de Datos tiene permisos
+  // Podria crear un componente que si el usuario no esta logueado haga logout automaticamente.
+  //Minuto 120 del Video
+
   const AuthRoute = () => {
     const { store, actions } = useContext(Context);
 

@@ -282,10 +282,7 @@ export function usuarioActions(getStore, getActions, setStore) {
       };
 
       let { respuestaJson, response } = await actions.useFetch(
-        "/register",
-        obj,
-        "POST"
-      );
+        "/register", obj, "POST" );
       console.log(response.ok);
       console.log(respuestaJson);
       if (response.ok) {
