@@ -4,6 +4,8 @@ import { Navigate } from "react-router-dom"; //v.6.3.0, para versiones viejas se
 
 const WithAuth = (Component) => {
   //HOC Componentes de alto orden
+  // Preguntar si tiene perfil OJO minuto 103
+  // Tengo que crear nuevos perfiles en Base de Datos
   const AuthRoute = () => {
     const { store, actions } = useContext(Context);
 
